@@ -71,42 +71,45 @@
 
     .star {
       position: fixed;
-      top: -20px;
+      top: 0;
       font-size: 20px;
-      animation: fall 5s linear forwards;
+      animation: diagonalFall 5s linear forwards;
       pointer-events: none;
       z-index: 999;
     }
 
-    @keyframes fall {
+    @keyframes diagonalFall {
       0% {
         opacity: 1;
-        transform: translateY(0) rotate(0deg);
+        transform: translate(0, 0) rotate(0deg);
       }
       100% {
         opacity: 0;
-        transform: translateY(100vh) rotate(360deg);
+        transform: translate(100vw, 100vh) rotate(360deg);
       }
     }
   </style>
   <script>
-    function createStar() {
-      const star = document.createElement('div');
-      star.className = 'star';
-      star.textContent = '★';
+    function createStarBurst() {
+      for (let i = 0; i < 20; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.textContent = '★';
 
-      const colors = ['#FFD700', '#FF69B4', '#87CEFA', '#FFFFFF'];
-      star.style.color = colors[Math.floor(Math.random() * colors.length)];
-      star.style.left = Math.random() * window.innerWidth + 'px';
+        const colors = ['#FFD700', '#FF69B4', '#87CEFA', '#FFFFFF'];
+        star.style.color = colors[Math.floor(Math.random() * colors.length)];
+        star.style.left = Math.random() * window.innerWidth * 0.3 + 'px'; // start from left side
+        star.style.top = Math.random() * 100 + 'px'; // slight vertical variation
 
-      document.body.appendChild(star);
+        document.body.appendChild(star);
 
-      setTimeout(() => {
-        star.remove();
-      }, 5000);
+        setTimeout(() => {
+          star.remove();
+        }, 5000);
+      }
     }
 
-    setInterval(createStar, 10000); // every 10 seconds
+    setInterval(createStarBurst, 5000); // every 5 seconds
   </script>
 </head>
 <body>
