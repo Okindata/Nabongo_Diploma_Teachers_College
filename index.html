@@ -33,25 +33,30 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    h1 {
+    .title {
       font-size: 2.2rem;
       color: #004080;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
-    h2, h3 {
+    .message {
       font-size: 1.5rem;
       color: #006699;
       margin: 0.5rem 0;
+    }
+
+    .highlight {
+      color: #cc0000;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="nabongo_logo.png" alt="Nabongo TTC Logo" class="logo">
-    <h1>Nabongo Diploma TTC</h1>
-    <h2>You are now connected to the Exam Network</h2>
-    <h3>Please launch Safe Exam Browser to begin</h3>
+    <div class="title">Nabongo Diploma TTC</div>
+    <div class="message">You are now connected to the Exam Network</div>
+    <div class="message">Please launch <span class="highlight">Safe Exam Browser</span> to begin</div>
   </div>
 </body>
 </html>
