@@ -9,7 +9,7 @@
       padding: 0;
       height: 100vh;
       background-color: #cceeff; /* Soft sky blue */
-      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      font-family: 'Segoe UI', 'Poppins', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -19,24 +19,40 @@
     .container {
       text-align: center;
       padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.85);
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+    }
+
+    .logo {
+      width: 120px;
+      margin: 0 auto 20px auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       color: #004080;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
+      color: #004080;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
       color: #006699;
       margin-bottom: 1rem;
     }
 
-    h3 {
+    h4 {
       font-size: 1.2rem;
       color: #0077aa;
     }
@@ -44,9 +60,11 @@
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to Nabongo Diploma Teachers College</h1>
-    <h2>You are now connected to the Exam Network</h2>
-    <h3>Please launch Safe Exam Browser to begin</h3>
+    <img src="nabongo_logo.png" alt="Nabongo TTC Logo" class="logo">
+    <h1>Nabongo Diploma</h1>
+    <h2>Teachers’ College</h2>
+    <h3>You are now connected to the Exam Network</h3>
+    <h4>Please launch Safe Exam Browser to begin</h4>
   </div>
 </body>
 </html>
