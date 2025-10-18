@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <title>Exam Network Access</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@700&display=swap');
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100vh;
       background-color: #cceeff;
-      font-family: 'Segoe UI', 'Poppins', sans-serif;
+      font-family: 'Roboto Condensed', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,38 +33,30 @@
       display: block;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      animation: fadeInScale 2s ease-out, pulse 4s ease-in-out infinite;
+      animation: rotateLogo 6s linear infinite;
     }
 
-    @keyframes fadeInScale {
-      0% {
-        opacity: 0;
-        transform: scale(0.8);
+    @keyframes rotateLogo {
+      from {
+        transform: rotate(0deg);
       }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
+      to {
+        transform: rotate(360deg);
       }
     }
 
     .title {
-      font-size: 2.2rem;
-      color: #004080;
+      font-size: 2.4rem;
+      font-family: 'Anton', sans-serif;
+      color: #002244;
       margin-bottom: 1rem;
+      letter-spacing: 1px;
     }
 
     .message {
-      font-size: 1.5rem;
-      color: #006699;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #004466;
       margin: 0.5rem 0;
     }
 
