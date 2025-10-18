@@ -21,10 +21,16 @@
     .container {
       text-align: center;
       padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.85);
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      background: radial-gradient(circle, rgba(255,255,255,0.9) 60%, rgba(204,238,255,0.1) 100%);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
       max-width: 600px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     .logo {
@@ -33,16 +39,14 @@
       display: block;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      animation: rotateLogo 6s linear infinite;
+      animation: flipY 4s ease-in-out infinite;
+      transform-style: preserve-3d;
     }
 
-    @keyframes rotateLogo {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
+    @keyframes flipY {
+      0%   { transform: rotateY(0deg); }
+      50%  { transform: rotateY(180deg); }
+      100% { transform: rotateY(0deg); }
     }
 
     .title {
